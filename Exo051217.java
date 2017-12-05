@@ -155,17 +155,15 @@ public class Exo051217 {
 
     public ArrayList<Integer> intersection(ArrayList<Integer> a, ArrayList<Integer> b){
 
-        int size = 0;
 
-        if(ent1.size() >= ent2.size()){
-            size = ent1.size();
-        }else{
-            size = ent1.size();
-        }
-        for(int i = 0; i < size; i++){
-            if (ent2.get(i) == ent1.get(i)){
-                inter.add(ent1.get(i));
+        for(int j = 0; j <ent1.size(); j++){
+
+            for(int i = 0; i < ent2.size(); i++){
+                if (ent2.get(i) == ent1.get(j)){
+                    inter.add(ent1.get(i));
+                }
             }
+
         }
         return inter;
     }
